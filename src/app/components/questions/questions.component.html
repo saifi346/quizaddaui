@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>{{this.topicservice.getTopicname()}}</h2>
+    <form #QuestionForm="ngForm" (ngSubmit)="QuestionForm.valid && onSubmit(QuestionForm)">
+        <div class="questn" *ngFor="let question of topic.questions; let i=index;">
+            <h3>Q.{{i+1}} {{question.question}} ?</h3>
+           
+            <div class="radio" *ngFor="let option of question.options">
+                <label><input type="radio" name='{{question.question}}' value='{{option}}' (click)='selectedAnswer(question.question,$event)'> {{option}}</label>
+            </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit Answers</button>
+    </form>
+
+</div>

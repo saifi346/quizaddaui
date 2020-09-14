@@ -1,0 +1,34 @@
+<div class="container">
+    <table class="table table-striped" id="boxshadow" style="text-align:center;">
+        <thead class="thead-dark">
+            <tr>
+                <th colspan="2" class="text-center">Delete Topic or Questions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let topic of topics">
+                <th scope="row" >{{topic.topicname}}</th>
+                <td>
+                    <button type="button" class="btn btn-primary" id="boxshadow" (click)="deleteTopic(topic)" >
+                        Delete Topic
+                    </button>
+                    <button type="button" class="btn btn-primary" id="boxshadow" (click)="deleteTopicQuestion(topic.topicname)" >
+                        Delete Questions
+                    </button>
+                </td>
+                
+               
+            </tr>
+            
+        </tbody>
+    </table>
+    <!-- Success message -->
+    <div class="success" *ngIf="showSucessMessage">
+        Topic Deleted Successfully Please refresh Page.
+    </div>
+
+    <!-- Error message -->
+    <div class="alert" *ngIf="serverErrorMessages">
+        {{serverErrorMessages}}
+    </div>
+</div>

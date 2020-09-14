@@ -1,0 +1,87 @@
+<div class="container">
+    <table class="table" id="boxshadow" style="text-align:center;">
+        <thead class="thead-dark">
+            <tr>
+                <th colspan="2">Add Topic and Questions</th>
+            </tr>
+        </thead>
+        <tr>
+            <td class="col1">
+                <label>Topic Name : </label>
+            </td>
+            <td class="col2">
+                <input type="text" width="200%" [(ngModel)]="this.topicservice.selectedTopics.topicname"
+                    placeholder="topic name ex: science">
+            </td>
+        </tr>
+        <tr>
+            <td class="col1">
+                <label>Question :</label>
+            </td>
+            <td class="col2">
+                <textarea cols="50" [(ngModel)]="this.topicservice.question.question"
+                    placeholder="Ex: What is capital of India"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td class="col1">
+                <label>Option 1 :</label>
+            </td>
+            <td class="col2">
+                <textarea cols="50" [(ngModel)]="option1" placeholder="Ex: Bangalore" required></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td class="col1">
+                <label>Option 2 :</label>
+            </td>
+            <td class="col2">
+                <textarea cols="50" [(ngModel)]="option2" placeholder="Ex:Mumbai"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td class="col1">
+                <label>Option 3 :</label>
+            </td>
+            <td class="col2">
+                <textarea cols="50" [(ngModel)]="option3" placeholder="Ex: New Delhi"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td class="col1">
+                <label>Option 4 :</label>
+            </td>
+            <td class="col2">
+                <textarea cols="50" [(ngModel)]="option4" placeholder="Ex: Kolkata"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td class="col1">
+                <label>Answer :</label>
+            </td>
+            <td class="col2">
+                <textarea cols="50" [(ngModel)]="this.topicservice.question.answer"
+                    placeholder="Ex: New Delhi"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td class="col1">
+                <button class="btn btn-danger" (click)="goToTopics()">Go to Topics</button>
+            </td>
+            <td>
+                <button class="btn btn-success" (click)="addQuestion()">Add this Question</button>
+            </td>
+
+        </tr>
+
+    </table>
+    <!-- Success message -->
+    <div class="success" *ngIf="showSucessMessage">
+        Question Added Successfully to the topic
+    </div>
+
+    <!-- Error message -->
+    <div class="alert" *ngIf="serverErrorMessages">
+        {{serverErrorMessages}}
+    </div>
+</div>

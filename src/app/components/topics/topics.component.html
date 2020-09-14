@@ -1,0 +1,8 @@
+<div class="container">
+    <h2>Please Choose Topic to Start Quiz</h2>
+    <div *ngFor="let topic of topics" class="topic">
+        <button type="button" class="btn btn-primary btn-lg" id="boxshadow" (click)="startQuiz(topic.topicname)" >
+            {{topic.topicname}}
+        </button>
+    </div>
+</div>

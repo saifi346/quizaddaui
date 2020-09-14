@@ -1,0 +1,45 @@
+<div class="container">
+    <table class="table table-striped" id="boxshadow" style="text-align:center;">
+        <thead class="thead-dark">
+            <tr>
+                <th colspan="2">USER PROFILE</th>
+             </tr>
+        </thead>
+        <tr>
+            <td>
+                <label>USERNAME : </label>
+            </td>
+            <td>
+                <input type="text" placeholder="{{user.username}}" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>EMAIL :</label>
+            </td>
+            <td>
+                <input type="text" placeholder="{{user.email}}" disabled>
+            </td>
+        </tr>
+        
+            <tr>
+                <td><b>TOPIC</b></td>
+                <td><b>SCORE</b></td>
+            </tr>
+        
+        <tbody>
+            <tr *ngFor="let topic of user.topics">
+                <td scope="row">{{topic.topicname}}</td>
+                <td>
+                    {{topic.score}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn btn-primary" (click)="goToLeaderBoard()">Leaderboard</button>
+                </td>
+                <td></td>
+           </tr>
+        </tbody>
+    </table>
+</div>

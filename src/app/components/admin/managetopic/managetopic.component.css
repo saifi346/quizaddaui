@@ -1,0 +1,13 @@
+.col1 {
+    text-align: right;
+}
+
+.col2 {
+    text-align: center;
+}
+
+input[type=text] {
+    width: 63%;
+    
+    box-sizing: border-box;
+  }

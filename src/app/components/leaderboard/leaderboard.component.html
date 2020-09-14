@@ -1,0 +1,34 @@
+<div class="container">
+    <table class="table table-striped" id="boxshadow" style="text-align:center;">
+        <thead class="thead-dark">
+            <tr>
+                <th colspan="2" class="text-center">LeaderBoard</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th colspan="2" class="text-right">
+                    <select class="options"  (change)="selectStatusHandler($event)" required>
+                        <option>Overall</option>
+                        <option *ngFor="let topic of topics">{{topic.topicname}}</option>
+                        <!-- <option>History</option>
+                        <option>Maths</option> -->
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th>Username</th>
+                <th>Score</th>
+            </tr>
+            <tr *ngFor="let user of leaderBoard">
+                <td scope="row">{{user.username}}</td>
+                <td>
+                    {{user.score}}
+                </td>
+
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>

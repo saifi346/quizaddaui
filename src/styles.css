@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+.container{
+    margin-top: 30px;
+    width: 70%;
+}
+
+table {
+    border: 1px solid black;
+  }
+
+#boxshadow {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+ 
+.success{
+  padding: 20px;
+  background-color:#249424; /* Green */
+  color: white;
+  margin-bottom: 15px;
+}
